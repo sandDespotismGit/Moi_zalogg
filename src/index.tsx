@@ -1,19 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+import { ChakraProvider } from '@chakra-ui/react';
+import * as Sentry from '@sentry/react';
+import { BrowserTracing } from '@sentry/tracing';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
+import packageInfo from '../package.json';
+import { ENVIRONMENT, SENTRY_DSN } from './constants/env';
+import { App } from './components/App';
+import { theme } from './styles/theme';
+
+import '@fontsource/raleway/index.css';
+import './styles/main.scss';
+
+Sentry.init({
+  enabled: !!SENTRY_DSN,
+  dsn: SENTRY_DSN,
+  release: `${packageInfo.name}@${packageInfo.version}`,
+  environment: ENVIRONMENT,
+  integrations: [new BrowserTracing()],
+  tracesSampleRate: 1.0,
+  normalizeDepth: 10,
+});
+
+ReactDOM.render(
+  <ChakraProvider theme={theme}>
     <App />
-  </React.StrictMode>
+  </ChakraProvider>,
+  document.getElementById('root'),
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
