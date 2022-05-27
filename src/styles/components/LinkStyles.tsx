@@ -3,7 +3,7 @@ export const LinkStyles = {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    color: 'brand.gray.umber',
+    color: 'brand.black',
     _focus: {
       shadow: 'none',
     },

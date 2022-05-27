@@ -65,6 +65,7 @@
     "draft-js": "^0.11.7",
     "formik": "^2.2.9",
     "framer-motion": "^5",
+    "myriad-font": "^0.0.2",
     "postcss": "^8.4.12",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
@@ -84,6 +85,7 @@
     "redux-saga": "^1.1.3",
     "resize-observer-polyfill": "^1.5.1",
     "sass": "^1.46.0",
+    "fontsource-montserrat": "^1.1.13",
     "typesafe-actions": "^5.1.0",
     "typescript": "^4.6.2",
     "uuid": "^8.3.2",
@@ -107,6 +109,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.6.2"
   }
 }

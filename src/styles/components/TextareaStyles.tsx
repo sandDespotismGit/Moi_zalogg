@@ -4,11 +4,10 @@ export const TextareaStyles = {
   },
   sizes: {},
   variants: {
-    'brand-support': {
+    'brand-form': {
       borderRadius: '0px',
       fontSize: 'sm',
-      color: 'brand.gray.dark',
-      bg: 'rgba(83, 55, 144, 0.4)',
+      bg: 'brand.beige',
       _focus: {
         boxShadow: 'inner',
       },

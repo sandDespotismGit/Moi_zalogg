@@ -25,22 +25,15 @@ export const theme = extendTheme({
   initialColorMode: 'dark',
   useSystemColorMode: false,
   fonts: {
-    heading: 'Raleway',
-    body: 'Raleway',
+    heading: 'Montserrat',
+    body: 'Montserrat',
   },
   colors: {
     brand: {
-      black: '#000000',
-      lightBlack: '#161515',
-      shadow: '#C4C4C4',
-      blue: '#060111',
-      purpleBlue: '#0D0128',
-      darkPurple: '#18004E',
-      purple: '#793790',
-      purpleGradinetLight: '#533790',
-      purpleLight: '#BD59E0',
-      pink: '#BF7CD7',
-      darkblue: '#320D40',
+      beige: '#F3E9D2',
+      orange: '#F96F5D',
+      black: '#13262F',
+      orange50: 'rgba(249, 111, 93, 0.5)',
     },
   },
   styles: {

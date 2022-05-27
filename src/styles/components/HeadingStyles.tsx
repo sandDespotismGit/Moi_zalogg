@@ -1,6 +1,7 @@
 export const HeadingStyles = {
   baseStyle: {
-    color: 'brand.gray.umber',
+    color: 'brand.black',
+    fontWeight: '800',
   },
   sizes: {
     xs: {

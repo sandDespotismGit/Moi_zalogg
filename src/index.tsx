@@ -8,7 +8,7 @@ import { ENVIRONMENT, SENTRY_DSN } from './constants/env';
 import { App } from './components/App';
 import { theme } from './styles/theme';
 
-import '@fontsource/raleway/index.css';
+import 'fontsource-montserrat/latin.css';
 import './styles/main.scss';
 
 Sentry.init({

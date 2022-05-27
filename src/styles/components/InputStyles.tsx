@@ -12,12 +12,13 @@ export const InputStyles = {
     },
   },
   variants: {
-    'brand-support': {
+    'brand-form': {
       field: {
         borderRadius: '0px',
         fontSize: 'sm',
-        color: 'brand.gray.dark',
-        bg: 'rgba(83, 55, 144, 0.4)',
+        placeholder: 'brand.orange',
+        color: 'brand.orange',
+        bg: 'brand.beige',
         _focus: {
           boxShadow: 'inner',
         },
