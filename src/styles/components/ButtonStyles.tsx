@@ -40,21 +40,21 @@ export const ButtonStyles = {
     },
   },
   variants: {
-    'brand-border-orange': {
-      color: 'brand.orange',
+    'brand-border-blue': {
+      color: 'brand.bluelight',
       bg: 'transparent',
       border: '2px',
-      borderColor: 'brand.orange',
+      borderColor: 'brand.bluelight',
       _hover: {
         bg: 'brand.orange50',
         color: 'brand.beige',
       },
     },
-    'brand-orange': {
-      color: 'brand.beige',
-      bg: 'brand.orange',
+    'brand-blue': {
+      color: 'brand.white',
+      bg: 'brand.bluelight',
       border: '2px',
-      borderColor: 'brand.orange',
+      borderColor: 'brand.bluelight',
       _hover: {
         bg: 'transparent',
         border: '2px',

@@ -30,10 +30,12 @@ export const theme = extendTheme({
   },
   colors: {
     brand: {
-      beige: '#F3E9D2',
-      orange: '#F96F5D',
-      black: '#13262F',
-      orange50: 'rgba(249, 111, 93, 0.5)',
+      white: '#FDFDFF',
+      bluelight: '#62929E',
+      black: '#393D3F',
+      beige: '#C6C5B9',
+      black80: 'rgba(57, 61, 63, 0.8)',
+      black50: 'rgba(57, 61, 63, 0.5)'
     },
   },
   styles: {

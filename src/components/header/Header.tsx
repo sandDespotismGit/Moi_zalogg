@@ -1,5 +1,7 @@
-import { Box, Button, HStack, Image } from '@chakra-ui/react';
+import { Box, Button, HStack, Icon, Image, Link, VStack, Text } from '@chakra-ui/react';
 import React from 'react';
+import { CgPhone } from 'react-icons/cg';
+import { FaTelegram } from 'react-icons/fa';
 
 import mainpage_logo from '../../assets/mainpage_logo.svg';
 
@@ -11,15 +13,22 @@ export const Header = React.memo(() => {
                     src={mainpage_logo}
                     alt="мойзалог.рф"
                     loading="lazy"
-                    w="full"
-                    h="full"
+                    w="90%"
+                    h="90%"
                     htmlWidth="full"
                     htmlHeight="full"
                 />
             </Box>
             <HStack spacing='30px'>
-                <Button size='md' variant='brand-border-orange'>Хочу стать брокером</Button>
-                <Button size='md' variant='brand-orange'>Войти</Button>
+                <HStack spacing='25px'>
+                    <Icon as={FaTelegram} w='32px' h='32px' color='brand.bluelight' />
+                    <Icon as={CgPhone} w='32px' h='32px' color='brand.bluelight' />
+                    <VStack align='start'>
+                        <Link fontWeight='800' href='#'> 8 (888) 888-88-88 </Link>
+                        <Text color='brand.black50'>с 9.00 до 21.00</Text>
+                    </VStack>
+                </HStack>
+                <Button size='md' variant='brand-blue'>Хочу стать брокером</Button>
             </HStack>
         </HStack>
     );

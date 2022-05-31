@@ -1,30 +1,50 @@
-import { Box, Button, HStack, Image, Link } from '@chakra-ui/react';
+import { Box, HStack, Icon, Image, VStack, Text, Link } from '@chakra-ui/react';
 import React from 'react';
+import { CgPhone } from 'react-icons/cg';
+import { AiOutlineMail } from 'react-icons/ai';
+import { BsFacebook } from 'react-icons/bs';
+import { IoLogoVk } from 'react-icons/io';
 
 import mainpage_logo from '../../assets/mainpage_logo.svg';
 
 export const Footer = React.memo(() => {
     return (
-        <HStack w='full' justify='space-between' paddingTop='25px'>
-            <HStack>
-                <Box paddingRight='30px'>
-                    <Image
-                        src={mainpage_logo}
-                        alt="мойзалог.рф"
-                        loading="lazy"
-                        w="full"
-                        h="full"
-                        htmlWidth="full"
-                        htmlHeight="full"
-                    />
-                </Box>
-                <Button size='md' variant='brand-border-orange'>Хочу стать брокером</Button>
-            </HStack>
-            <HStack spacing='50px'>
-                <Link>Подобрать продукт</Link>
-                <Link>Часто задавамые вопросы</Link>
-                <Link>Отзывы</Link>
-                <Link fontWeight='800'>Задать вопрос</Link>
+        <HStack w='full' justify='space-between' paddingTop='25px' align="top">
+            <Box paddingRight='250px'>
+                <Image
+                    src={mainpage_logo}
+                    alt="мойзалог.рф"
+                    loading="lazy"
+                    htmlWidth="full"
+                    htmlHeight="full"
+                />
+            </Box>
+            <HStack justify='space-between' w='full' align='top'>
+                <VStack align='start'>
+                    <HStack spacing='25px'>
+                        <Icon as={CgPhone} w='32px' h='32px' color='brand.bluelight' />
+                        <VStack align='start'>
+                            <Link fontWeight='800' href='#'> 8 (888) 888-88-88 </Link>
+                            <Text color='brand.black50'>с 9.00 до 21.00</Text>
+                        </VStack>
+                    </HStack>
+                    <HStack spacing='25px'>
+                        <Icon as={AiOutlineMail} w='32px' h='32px' color='brand.bluelight' />
+                        <Link fontWeight='800' href='#'> moizalog@support.ru </Link>
+                    </HStack>
+                </VStack>
+                <VStack align='start'>
+                    <Link href='#'>Сотрудничество</Link>
+                    <Link href='#'>Вложить деньги</Link>
+                    <Link href='#'>Кредиторам</Link>
+                </VStack>
+                <VStack align='start'>
+                    <Text color="brand.black80">Мы в соцсетях</Text>
+                    <HStack spacing='25px'>
+                        <Icon as={BsFacebook} w='32px' h='32px' color='brand.black' />
+                        <Icon as={IoLogoVk} w='32px' h='32px' color='brand.black' />
+                    </HStack>
+                </VStack>
             </HStack>
         </HStack>
     );
