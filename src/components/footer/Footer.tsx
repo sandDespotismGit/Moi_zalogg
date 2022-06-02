@@ -41,8 +41,12 @@ export const Footer = React.memo(() => {
                 <VStack align='start'>
                     <Text color="brand.black80">Мы в соцсетях</Text>
                     <HStack spacing='25px'>
+                        <Link href='https://chakra-ui.com'>
                         <Icon as={BsFacebook} w='32px' h='32px' color='brand.black' />
+                        </Link>
+                        <Link>
                         <Icon as={IoLogoVk} w='32px' h='32px' color='brand.black' />
+                        </Link>
                     </HStack>
                 </VStack>
             </HStack>

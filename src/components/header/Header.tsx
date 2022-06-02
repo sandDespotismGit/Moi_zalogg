@@ -7,7 +7,7 @@ import mainpage_logo from '../../assets/mainpage_logo.svg';
 
 export const Header = React.memo(() => {
     return (
-        <HStack w='full' justify='space-between'>
+        <HStack w='full' justify='space-between' zIndex={1}>
             <Box>
                 <Image
                     src={mainpage_logo}
@@ -21,7 +21,9 @@ export const Header = React.memo(() => {
             </Box>
             <HStack spacing='30px'>
                 <HStack spacing='25px'>
+                    <Link href='https://chakra-ui.com/docs/components/navigation/link'>
                     <Icon as={FaTelegram} w='32px' h='32px' color='brand.bluelight' />
+                    </Link>
                     <Icon as={CgPhone} w='32px' h='32px' color='brand.bluelight' />
                     <VStack align='start'>
                         <Link fontWeight='800' href='#'> 8 (888) 888-88-88 </Link>

@@ -32,6 +32,7 @@ export const theme = extendTheme({
     brand: {
       white: '#FDFDFF',
       bluelight: '#62929E',
+      blue50: 'rgba(98, 146, 158, 0.5)',
       black: '#393D3F',
       beige: '#C6C5B9',
       black80: 'rgba(57, 61, 63, 0.8)',

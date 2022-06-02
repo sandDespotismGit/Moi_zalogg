@@ -46,8 +46,9 @@ export const ButtonStyles = {
       border: '2px',
       borderColor: 'brand.bluelight',
       _hover: {
-        bg: 'brand.orange50',
-        color: 'brand.beige',
+        bg: 'brand.blue50',
+        color: 'brand.white',
+        borderColor: 'brand.white'
       },
     },
     'brand-blue': {
@@ -58,8 +59,8 @@ export const ButtonStyles = {
       _hover: {
         bg: 'transparent',
         border: '2px',
-        borderColor: 'brand.orange',
-        color: 'brand.orange',
+        borderColor: 'brand.bluelighr',
+        color: 'brand.bluelight',
       },
     },
     'brand-transparent': {
