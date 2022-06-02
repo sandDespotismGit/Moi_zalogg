@@ -1,7 +1,7 @@
 import { Box, VStack, Image, HStack, Text, Heading, Icon, Square, Spacer, Button, List, ListIcon, ListItem } from '@chakra-ui/react';
-import React from 'react';
+import React, { useState } from 'react';
 import { AiOutlineFieldTime, AiOutlinePercentage } from 'react-icons/ai'
-import { BsFillPersonCheckFill } from 'react-icons/bs'
+import { BsArrowLeft, BsArrowRight, BsFillPersonCheckFill } from 'react-icons/bs'
 import { MdCheck } from 'react-icons/md'
 
 import { useWindowDimensions } from '../../hooks/useWindowDimensions';
@@ -13,9 +13,16 @@ import main_image from '../../assets/mainimage.png';
 import flat_image from '../../assets/flatimage.png';
 import office_image from '../../assets/oficeimage.png';
 import land_image from '../../assets/landimage.png';
+import car_image from '../../assets/car_image.png';
+import house_image from '../../assets/house_image.png';
 
 export const Main = React.memo(() => {
   const { height } = useWindowDimensions();
+  const cards = [['Квартира', flat_image], ['Коммерческая недвижимость', office_image], ['Земельный участок', land_image], ['Автомобиль', car_image], ['Дом', house_image], ['Дача', house_image], ['Дача', house_image]];
+  const [centralCard, setCard] = useState(1);
+  const [LCard, setLCard] = useState(0);
+  const [RCard, setRCard] = useState(2);
+
   return (
     <VStack minH={`${height}px`} py="45px" px="80px" backgroundColor="brand.white" >
       <Header />
@@ -70,11 +77,56 @@ export const Main = React.memo(() => {
           </HStack>
         </VStack>
       </VStack>
-      <HStack w='full' justify='space-between' paddingTop='60px'>
-        <Card firstWord='Квартира' secondWord='от 20 кв.м' image={<Image src={flat_image} right='0px' bottom='0px' borderRadius='10px' position='absolute'></Image>} />
-        <Card firstWord='Коммерческая недвижимоcть' image={<Image src={office_image} right='0px' bottom='0px' borderRadius='10px' position='absolute'></Image>} />
-        <Card firstWord='Земельный участок' secondWord='от 1 га' image={<Image src={land_image} right='0px' bottom='0px' borderRadius='10px' position='absolute'></Image>} />
-      </HStack>
+      <VStack w='full'>
+        <HStack w='full' justify='space-between' paddingTop='60px'>
+          <Card firstWord={cards[LCard][0]} image={<Image src={cards[LCard][1]} right='0px' bottom='0px' borderRadius='10px' position='absolute' />} />
+          <Card firstWord={cards[centralCard][0]} image={<Image src={cards[centralCard][1]} right='0px' bottom='0px' borderRadius='10px' position='absolute' />} />
+          <Card firstWord={cards[RCard][0]} image={<Image src={cards[RCard][1]} right='0px' bottom='0px' borderRadius='10px' position='absolute' />} />
+        </HStack>
+        <HStack w='full' justify='end' paddingTop='60px'>
+          <HStack spacing='30px'>
+            <Square>
+              <Button onClick={() => {
+                if (LCard === 0) {
+                  setLCard(cards.length - 1)
+                } else {
+                  setLCard(LCard - 1)
+                }
+                if (centralCard === 0) {
+                  setCard(cards.length - 1)
+                } else {
+                  setCard(centralCard - 1)
+                }
+                if (RCard === 0) {
+                  setRCard(cards.length - 1)
+                } else {
+                  setRCard(RCard - 1)
+                }
+              }}
+                variant='brand-transparent-outline' p='0px' m='0px' boxSize='50px' leftIcon={<BsArrowLeft size={25} />} iconSpacing='0' />
+            </Square>
+            <Square >
+              <Button onClick={() => {
+                if (LCard === cards.length - 1) {
+                  setLCard(0)
+                } else {
+                  setLCard(LCard + 1)
+                }
+                if (centralCard === cards.length - 1) {
+                  setCard(0)
+                } else {
+                  setCard(centralCard + 1)
+                }
+                if (RCard === cards.length - 1) {
+                  setRCard(0)
+                } else {
+                  setRCard(RCard + 1)
+                }
+              }} variant='brand-transparent-outline' p='0px' m='0px' boxSize='50px' leftIcon={<BsArrowRight size={25} />} iconSpacing='0' />
+            </Square>
+          </HStack>
+        </HStack>
+      </VStack>
       <HStack spacing='120px' align='top' paddingTop='60px' paddingBottom='80px'>
         <VStack spacing='40px'>
           <HStack>
@@ -137,10 +189,10 @@ export const Main = React.memo(() => {
             </Text>
           </HStack>
           <Text color='brand.white'>
-          Вы остаетесь собственником имущества
+            Вы остаетесь собственником имущества
           </Text>
           <HStack>
-            
+
           </HStack>
         </VStack>
       </HStack>

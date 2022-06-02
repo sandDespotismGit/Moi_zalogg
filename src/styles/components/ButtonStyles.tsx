@@ -70,6 +70,16 @@ export const ButtonStyles = {
         bg: 'brand.gray.smoky',
       },
     },
+    'brand-transparent-outline': {
+      color: 'brand.black',
+      bg: 'transparent',
+      border: '2px',
+      borderRadius: '999px',
+      _hover: {
+        bg: 'brand.black',
+        color: 'brand.white'
+      },
+    },
   },
     link: {
       color: 'brand.gray.umber',
