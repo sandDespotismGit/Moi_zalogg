@@ -1951,7 +1951,7 @@
   resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.5.10.tgz#0dc94425c575c785c2ac92d244c543bfbb005080"
   integrity sha512-JXe9wURwLFtPfrD3yYnfvue/Uv2L1iSEor4w6M5CcGO4iWSoaFgk7BPLUwksGD7ChKpGKpaNNLUt67VlCu2A1g==
 
-"@fontsource/open-sans@4.5.10":
+"@fontsource/open-sans@^4.5.10":
   version "4.5.10"
   resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.5.10.tgz#c4269c54d6f5f8661322facb5946d8188fadc7f2"
   integrity sha512-MrtTDfWb1Tu9YxVh2KaKmsKBn6O3KL/lHZS0KRKK58jgqvdwuiDt4QW4udmW4FQf0XOWgnZ+4vKUF80F3SqBAA==

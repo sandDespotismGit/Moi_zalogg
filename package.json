@@ -41,7 +41,7 @@
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@fontsource/montserrat": "^4.5.10",
-    "@fontsource/open-sans": "4.5.10",
+    "@fontsource/open-sans": "^4.5.10",
     "@fontsource/raleway": "^4.5.3",
     "@redux-devtools/extension": "^3.2.2",
     "@sentry/react": "^6.17.7",

@@ -1,7 +1,7 @@
 export const TextStyles = {
   baseStyle: {
     color: 'brand.black',
-    fontWeight: '600',
+    fontWeight: '400',
   },
   sizes: {
     xs: {

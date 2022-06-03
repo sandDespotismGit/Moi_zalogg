@@ -8,8 +8,10 @@ import { IoLogoVk } from 'react-icons/io';
 import mainpage_logo from '../../assets/mainpage_logo.svg';
 
 export const Footer = React.memo(() => {
+    const ph = ['7px', '15px','30px','45px']
+    const pw = ['20px', '40px','60px','80px']
     return (
-        <HStack w='full' justify='space-between' paddingTop='25px' align="top">
+        <HStack w='full' justify='space-between' paddingTop='45px' align="top" px={pw} py={ph}>
             <Box paddingRight='250px'>
                 <Image
                     src={mainpage_logo}

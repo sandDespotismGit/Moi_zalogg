@@ -15,10 +15,12 @@ export const InputStyles = {
     'brand-form': {
       field: {
         borderRadius: '0px',
+        border: '1px',
+        borderColor: 'brand.bluelight',
         fontSize: 'sm',
-        placeholder: 'brand.orange',
-        color: 'brand.orange',
-        bg: 'brand.beige',
+        placeholder: 'brand.bluelight',
+        color: 'brand.bluelight',
+        bg: 'transparent',
         _focus: {
           boxShadow: 'inner',
         },

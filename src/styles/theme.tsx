@@ -25,8 +25,8 @@ export const theme = extendTheme({
   initialColorMode: 'dark',
   useSystemColorMode: false,
   fonts: {
-    heading: 'Montserrat',
-    body: 'Montserrat',
+    heading: 'Open Sans',
+    body: 'Open Sans',
   },
   colors: {
     brand: {
